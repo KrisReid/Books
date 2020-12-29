@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,19 @@
 		022BE6FE2593F87400121F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE6FD2593F87400121F52 /* ContentView.swift */; };
 		022BE7002593F88100121F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022BE6FF2593F88100121F52 /* Assets.xcassets */; };
 		022BE7032593F88100121F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022BE7022593F88100121F52 /* Preview Assets.xcassets */; };
+		022BE70F2594D2B400121F52 /* SwapBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE70E2594D2B400121F52 /* SwapBooksView.swift */; };
+		022BE7142594D37D00121F52 /* MyBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE7132594D37D00121F52 /* MyBooksView.swift */; };
+		022BE71F2594DF6100121F52 /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE71E2594DF6100121F52 /* TileModifier.swift */; };
+		022BE7232594E32B00121F52 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE7222594E32B00121F52 /* Book.swift */; };
+		022BE7282594EAD600121F52 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 022BE7272594EAD600121F52 /* SwiftPackageProductDependency */; };
+		022BE72C2594F2E400121F52 /* IndividualBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE72B2594F2E400121F52 /* IndividualBookView.swift */; };
+		022BE7322595064300121F52 /* AddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE7312595064300121F52 /* AddBookViewModel.swift */; };
+		022BE7382595127300121F52 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE7372595127300121F52 /* AddBookView.swift */; };
+		022BE73C2598C8D700121F52 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE73B2598C8D700121F52 /* ImagePicker.swift */; };
+		022BE73F2598C90E00121F52 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE73E2598C90E00121F52 /* PhotoCaptureView.swift */; };
+		022BE7AE2598EEB000121F52 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE7AD2598EEB000121F52 /* BooksViewModel.swift */; };
+		02818C9B259B751A001C854F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02818C9A259B751A001C854F /* GoogleService-Info.plist */; };
+		5D3ABCF142720E5BEFD4161A /* Pods_BookSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604FD45F59C265ADC44FCD6 /* Pods_BookSwap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +33,20 @@
 		022BE6FF2593F88100121F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022BE7022593F88100121F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		022BE7042593F88100121F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		022BE70E2594D2B400121F52 /* SwapBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapBooksView.swift; sourceTree = "<group>"; };
+		022BE7132594D37D00121F52 /* MyBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksView.swift; sourceTree = "<group>"; };
+		022BE71E2594DF6100121F52 /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
+		022BE7222594E32B00121F52 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		022BE72B2594F2E400121F52 /* IndividualBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualBookView.swift; sourceTree = "<group>"; };
+		022BE7312595064300121F52 /* AddBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModel.swift; sourceTree = "<group>"; };
+		022BE7372595127300121F52 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		022BE73B2598C8D700121F52 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		022BE73E2598C90E00121F52 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
+		022BE7AD2598EEB000121F52 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		02818C9A259B751A001C854F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3B22A8F21F8C25AB4200D555 /* Pods-BookSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.release.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.release.xcconfig"; sourceTree = "<group>"; };
+		3FD8F54E61D4C9B0E34667C9 /* Pods-BookSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.debug.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.debug.xcconfig"; sourceTree = "<group>"; };
+		B604FD45F59C265ADC44FCD6 /* Pods_BookSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022BE7282594EAD600121F52 /* BuildFile in Frameworks */,
+				5D3ABCF142720E5BEFD4161A /* Pods_BookSwap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +67,8 @@
 			children = (
 				022BE6FA2593F87400121F52 /* BookSwap */,
 				022BE6F92593F87400121F52 /* Products */,
+				FF4770590BE59AFCDC713B8D /* Pods */,
+				DFF603B899F00391F530DC0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,10 +83,14 @@
 		022BE6FA2593F87400121F52 /* BookSwap */ = {
 			isa = PBXGroup;
 			children = (
+				022BE7342595065300121F52 /* View Models */,
+				022BE71D2594DF4700121F52 /* Utilities */,
+				022BE7212594E30A00121F52 /* Model */,
+				022BE7172594D91100121F52 /* Views */,
 				022BE6FB2593F87400121F52 /* BookSwapApp.swift */,
-				022BE6FD2593F87400121F52 /* ContentView.swift */,
 				022BE6FF2593F88100121F52 /* Assets.xcassets */,
 				022BE7042593F88100121F52 /* Info.plist */,
+				02818C9A259B751A001C854F /* GoogleService-Info.plist */,
 				022BE7012593F88100121F52 /* Preview Content */,
 			);
 			path = BookSwap;
@@ -69,6 +104,62 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		022BE7172594D91100121F52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				022BE6FD2593F87400121F52 /* ContentView.swift */,
+				022BE7132594D37D00121F52 /* MyBooksView.swift */,
+				022BE7372595127300121F52 /* AddBookView.swift */,
+				022BE73E2598C90E00121F52 /* PhotoCaptureView.swift */,
+				022BE72B2594F2E400121F52 /* IndividualBookView.swift */,
+				022BE70E2594D2B400121F52 /* SwapBooksView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		022BE71D2594DF4700121F52 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				022BE71E2594DF6100121F52 /* TileModifier.swift */,
+				022BE73B2598C8D700121F52 /* ImagePicker.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		022BE7212594E30A00121F52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				022BE7222594E32B00121F52 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		022BE7342595065300121F52 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				022BE7312595064300121F52 /* AddBookViewModel.swift */,
+				022BE7AD2598EEB000121F52 /* BooksViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		DFF603B899F00391F530DC0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B604FD45F59C265ADC44FCD6 /* Pods_BookSwap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF4770590BE59AFCDC713B8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FD8F54E61D4C9B0E34667C9 /* Pods-BookSwap.debug.xcconfig */,
+				3B22A8F21F8C25AB4200D555 /* Pods-BookSwap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,15 +167,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 022BE7072593F88100121F52 /* Build configuration list for PBXNativeTarget "BookSwap" */;
 			buildPhases = (
+				B538B933AF8FC6F1CFD4DE92 /* [CP] Check Pods Manifest.lock */,
 				022BE6F42593F87400121F52 /* Sources */,
 				022BE6F52593F87400121F52 /* Frameworks */,
 				022BE6F62593F87400121F52 /* Resources */,
+				1967A3345D5A372D29745478 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BookSwap;
+			packageProductDependencies = (
+				022BE7272594EAD600121F52 /* SwiftPackageProductDependency */,
+			);
 			productName = BookSwap;
 			productReference = 022BE6F82593F87400121F52 /* BookSwap.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 022BE6EF2593F87400121F52;
+			packageReferences = (
+				022BE7262594EAD600121F52 /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = 022BE6F92593F87400121F52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,10 +227,53 @@
 			files = (
 				022BE7032593F88100121F52 /* Preview Assets.xcassets in Resources */,
 				022BE7002593F88100121F52 /* Assets.xcassets in Resources */,
+				02818C9B259B751A001C854F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1967A3345D5A372D29745478 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookSwap/Pods-BookSwap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookSwap/Pods-BookSwap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookSwap/Pods-BookSwap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B538B933AF8FC6F1CFD4DE92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookSwap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		022BE6F42593F87400121F52 /* Sources */ = {
@@ -139,7 +281,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				022BE6FE2593F87400121F52 /* ContentView.swift in Sources */,
+				022BE7382595127300121F52 /* AddBookView.swift in Sources */,
+				022BE7322595064300121F52 /* AddBookViewModel.swift in Sources */,
+				022BE70F2594D2B400121F52 /* SwapBooksView.swift in Sources */,
+				022BE72C2594F2E400121F52 /* IndividualBookView.swift in Sources */,
+				022BE73F2598C90E00121F52 /* PhotoCaptureView.swift in Sources */,
+				022BE7232594E32B00121F52 /* Book.swift in Sources */,
 				022BE6FC2593F87400121F52 /* BookSwapApp.swift in Sources */,
+				022BE73C2598C8D700121F52 /* ImagePicker.swift in Sources */,
+				022BE7AE2598EEB000121F52 /* BooksViewModel.swift in Sources */,
+				022BE7142594D37D00121F52 /* MyBooksView.swift in Sources */,
+				022BE71F2594DF6100121F52 /* TileModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +416,7 @@
 		};
 		022BE7082593F88100121F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FD8F54E61D4C9B0E34667C9 /* Pods-BookSwap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -280,12 +433,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.krisreid.BookSwap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		022BE7092593F88100121F52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B22A8F21F8C25AB4200D555 /* Pods-BookSwap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,7 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.krisreid.BookSwap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -328,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		022BE7262594EAD600121F52 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		022BE7272594EAD600121F52 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 022BE7262594EAD600121F52 /* RemoteSwiftPackageReference */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 022BE6F02593F87400121F52 /* Project object */;
 }
