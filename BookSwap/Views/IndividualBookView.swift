@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct IndividualBookView: View {
     
-//    let book: Book
+//    let book: BookViewModel
     let book: Book
 
     

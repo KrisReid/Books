@@ -9,7 +9,7 @@ import Foundation
 import FirebaseDatabase
 
 
-struct Book : Hashable {
+struct Book: Hashable {
     
     let title, author, publisher, imageUrl: String
     let pageCount: Int
