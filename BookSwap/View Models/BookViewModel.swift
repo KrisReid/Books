@@ -31,7 +31,6 @@ class BookViewModel: ObservableObject {
     
     @Published var books = [Book]()
     
-    
     @Published var title: String = ""
     @Published var author: String = ""
     @Published var publisher: String = ""
@@ -45,19 +44,10 @@ class BookViewModel: ObservableObject {
     func fetchBooks() {
         let bookRef = Database.database().reference()
         let bookRefQuery = bookRef.queryOrderedByKey()
-
-//        bookRefQuery.observeSingleEvent(of: .value) { (snapshot) in
-//            for item in snapshot.children {
-//                guard let snapshot = item as? DataSnapshot else { continue }
-//                guard let book = Book(snapshot) else { continue }
-//                self.books.insert(book, at: 0)
-//            }
-//        }
-        
+ 
         bookRefQuery.observe(.value) { (snapshot) in
             
             self.books.removeAll()
-//            self?.managers.removeAllObjects()
             
             for item in snapshot.children {
                 guard let snapshot = item as? DataSnapshot else { continue }
@@ -70,17 +60,16 @@ class BookViewModel: ObservableObject {
 
     func postBook() {
         
-        let id = NSUUID().uuidString
-        
+        let numPages = Int(self.pageCount)
+
         let bookDictionary : [String:Any] = [
             "title" : self.title,
             "author" : self.author,
             "publisher" : "Can't be assed",
             "imageUrl" : "Can't be assed",
-            "pageCount" : self.pageCount
+            "pageCount" : numPages ?? 99999
         ]
-        Database.database().reference().child(id).setValue(bookDictionary)
-//        Database.database().reference().child(id).updateChildValues(bookDictionary)
+        Database.database().reference().childByAutoId().setValue(bookDictionary)
     }
 }
 
