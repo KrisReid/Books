@@ -13,21 +13,18 @@ import FirebaseAuth
 @main
 struct BookSwapApp: App {
     
-//    init() {
-//        FirebaseApp.configure()
-//    }
-    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            ContentView(info: self.delegate)
+            ContentView(user: self.delegate)
         }
     }
 }
 
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
+    
+//    @Published var user: FirebaseAuth.User?
     
     @Published var email = ""
     @Published var displayName = ""
@@ -56,8 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, Observ
 
         guard let authentication = user.authentication else { return }
         
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                            accessToken: authentication.accessToken)
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
 
         
         //Sign into Firebase
@@ -66,20 +62,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, Observ
                 print((err?.localizedDescription)!)
                 return
             }
+//            self.user = result?.user
             
             self.email = result?.user.email ?? ""
             self.displayName = result?.user.displayName ?? ""
             self.photoURL = result?.user.photoURL ?? URL(string: "")
             self.phoneNumber = result?.user.phoneNumber ?? ""
         }
-        
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        
         print(error.localizedDescription)
-        
     }
-
+    
 }
-
