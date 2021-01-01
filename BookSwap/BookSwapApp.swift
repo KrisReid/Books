@@ -21,6 +21,7 @@ struct BookSwapApp: App {
     
     var body: some Scene {
         WindowGroup {
+//            ContentView()
             ContentView(info: self.delegate)
         }
     }
@@ -29,6 +30,9 @@ struct BookSwapApp: App {
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
     
     @Published var email = ""
+    @Published var displayName = ""
+    @Published var photoURL = URL(string: "")
+    @Published var phoneNumber = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -63,11 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, Observ
                 return
             }
             
-//            NotificationCenter.default.post(name: NSNotification.Name("Sign In"), object: nil)
-            
-            self.email = (result?.user.email)!
-            print(result?.user.email!)
-                                                
+            self.email = result?.user.email ?? ""
+            self.displayName = result?.user.displayName ?? ""
+            self.photoURL = result?.user.photoURL ?? URL(string: "")
+            self.phoneNumber = result?.user.phoneNumber ?? ""
         }
         
     }
