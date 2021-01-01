@@ -22,7 +22,7 @@
 		022BE73F2598C90E00121F52 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE73E2598C90E00121F52 /* PhotoCaptureView.swift */; };
 		022BE7AE2598EEB000121F52 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE7AD2598EEB000121F52 /* BookViewModel.swift */; };
 		02818C9B259B751A001C854F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02818C9A259B751A001C854F /* GoogleService-Info.plist */; };
-		5D3ABCF142720E5BEFD4161A /* Pods_BookSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604FD45F59C265ADC44FCD6 /* Pods_BookSwap.framework */; };
+		9BF07D8F3E71E0183D9D8498 /* Pods_BookSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09220BAFF387FD06F79C3E2 /* Pods_BookSwap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +42,9 @@
 		022BE73E2598C90E00121F52 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		022BE7AD2598EEB000121F52 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		02818C9A259B751A001C854F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3B22A8F21F8C25AB4200D555 /* Pods-BookSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.release.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.release.xcconfig"; sourceTree = "<group>"; };
-		3FD8F54E61D4C9B0E34667C9 /* Pods-BookSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.debug.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.debug.xcconfig"; sourceTree = "<group>"; };
-		B604FD45F59C265ADC44FCD6 /* Pods_BookSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C09220BAFF387FD06F79C3E2 /* Pods_BookSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A861B8C88574B72857AEDB /* Pods-BookSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.debug.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.debug.xcconfig"; sourceTree = "<group>"; };
+		CF6FC58E8DE0EAB77C2EE085 /* Pods-BookSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.release.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				022BE7282594EAD600121F52 /* SDWebImageSwiftUI in Frameworks */,
-				5D3ABCF142720E5BEFD4161A /* Pods_BookSwap.framework in Frameworks */,
+				9BF07D8F3E71E0183D9D8498 /* Pods_BookSwap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 				022BE6FA2593F87400121F52 /* BookSwap */,
 				022BE6F92593F87400121F52 /* Products */,
 				FF4770590BE59AFCDC713B8D /* Pods */,
-				DFF603B899F00391F530DC0A /* Frameworks */,
+				6A4F456F7AAC404A4A2FBE84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,10 +140,10 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		DFF603B899F00391F530DC0A /* Frameworks */ = {
+		6A4F456F7AAC404A4A2FBE84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B604FD45F59C265ADC44FCD6 /* Pods_BookSwap.framework */,
+				C09220BAFF387FD06F79C3E2 /* Pods_BookSwap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,8 +151,8 @@
 		FF4770590BE59AFCDC713B8D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3FD8F54E61D4C9B0E34667C9 /* Pods-BookSwap.debug.xcconfig */,
-				3B22A8F21F8C25AB4200D555 /* Pods-BookSwap.release.xcconfig */,
+				C3A861B8C88574B72857AEDB /* Pods-BookSwap.debug.xcconfig */,
+				CF6FC58E8DE0EAB77C2EE085 /* Pods-BookSwap.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -164,11 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 022BE7072593F88100121F52 /* Build configuration list for PBXNativeTarget "BookSwap" */;
 			buildPhases = (
-				B538B933AF8FC6F1CFD4DE92 /* [CP] Check Pods Manifest.lock */,
+				4660A9EAC504AECD9531294C /* [CP] Check Pods Manifest.lock */,
 				022BE6F42593F87400121F52 /* Sources */,
 				022BE6F52593F87400121F52 /* Frameworks */,
 				022BE6F62593F87400121F52 /* Resources */,
-				1967A3345D5A372D29745478 /* [CP] Embed Pods Frameworks */,
+				1CB28630C28A475C64FD8A02 /* [CP] Embed Pods Frameworks */,
+				D30FAF74D7AF273EA7BF883E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +232,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1967A3345D5A372D29745478 /* [CP] Embed Pods Frameworks */ = {
+		1CB28630C28A475C64FD8A02 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -248,7 +249,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookSwap/Pods-BookSwap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B538B933AF8FC6F1CFD4DE92 /* [CP] Check Pods Manifest.lock */ = {
+		4660A9EAC504AECD9531294C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,6 +269,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D30FAF74D7AF273EA7BF883E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookSwap/Pods-BookSwap-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookSwap/Pods-BookSwap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookSwap/Pods-BookSwap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -412,7 +430,7 @@
 		};
 		022BE7082593F88100121F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FD8F54E61D4C9B0E34667C9 /* Pods-BookSwap.debug.xcconfig */;
+			baseConfigurationReference = C3A861B8C88574B72857AEDB /* Pods-BookSwap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -435,7 +453,7 @@
 		};
 		022BE7092593F88100121F52 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B22A8F21F8C25AB4200D555 /* Pods-BookSwap.release.xcconfig */;
+			baseConfigurationReference = CF6FC58E8DE0EAB77C2EE085 /* Pods-BookSwap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

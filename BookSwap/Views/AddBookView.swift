@@ -54,7 +54,6 @@ struct AddBookView: View {
                         
                         TextField("Enter author", text: self.$vm.author)
                             .background(Color(.white))
-                            .padding(.top, 15)
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)))
