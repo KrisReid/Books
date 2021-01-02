@@ -2,13 +2,19 @@
 //  User.swift
 //  BookSwap
 //
-//  Created by Kris Reid on 01/01/2021.
+//  Created by Kris Reid on 02/01/2021.
 //
 
 import Foundation
 
-struct User: Hashable {
-    
-    let email, displayName, phoneNumber: String
-    let photoURL: URL
+struct User: Codable {
+    var uid: String
+    var email: String?
+    var displayName: String?
+
+    init(uid: String, email: String?, displayName: String?) {
+        self.uid = uid
+        self.email = email
+        self.displayName = displayName
+    }
 }

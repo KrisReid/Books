@@ -13,13 +13,14 @@ import AuthenticationServices
 
 
 struct SignInView: View {
-    
+    //Access to userObject that holds Google data
     @ObservedObject var user: AppDelegate
-    
+    //The uid of the apple account
     @State var uid: String
     
     @State var currentNonce: String?
     @State var pulse = false
+    
     
     var body: some View {
         ZStack {
@@ -27,24 +28,7 @@ struct SignInView: View {
                 .ignoresSafeArea()
             
             if !user.uid.isEmpty || !self.uid.isEmpty {
-                TabView {
-                    MyBooksView()
-                        .tabItem {
-                            Image(systemName: "books.vertical.fill")
-                            Text("My Bookcase")
-                        }
-                        .tag(0)
-                    SwapBooksView(user: user, uid: $uid)
-                        .tabItem {
-                            Image(systemName: "shuffle")
-                            Text("Book Exchange")
-                        }
-                        .tag(1)
-                }
-                .accentColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-                .onAppear() {
-                    UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                }
+                BookTabView(user: self.user, uid: $uid)
             }
             else {
                 VStack {
@@ -71,50 +55,9 @@ struct SignInView: View {
                     VStack (spacing: 10) {
                         GoogleSignInButton()
                         FacebookSignInButton()
-                        
-                        SignInWithAppleButton(
-                            onRequest: { request in
-                                let nonce = self.randomNonceString()
-                                self.currentNonce = nonce
-                                request.requestedScopes = [.fullName, .email]
-                                request.nonce = self.sha256(nonce)
-                            },
-                            onCompletion: { result in
-                                switch result {
-                                case .success(let authResults):
-                                    switch authResults.credential {
-                                    case let appleIDCredential as ASAuthorizationAppleIDCredential:
-                                        
-                                        guard let nonce = self.currentNonce else {
-                                            fatalError("Invalid state: A login callback was received, but no login request was sent.")
-                                        }
-                                        guard let appleIDToken = appleIDCredential.identityToken else {
-                                            fatalError("Invalid state: A login callback was received, but no login request was sent.")
-                                        }
-                                        guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                                            print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
-                                            return
-                                        }
-                                        
-                                        let credential = OAuthProvider.credential(withProviderID: "apple.com",idToken: idTokenString,rawNonce: nonce)
-                                    
-                                        Auth.auth().signIn(with: credential) { (result, err) in
-                                            if err != nil {
-                                                print((err?.localizedDescription)!)
-                                                return
-                                            }
-                                            self.uid = Auth.auth().currentUser?.uid ?? ""
-                                        }
-                                    default:
-                                        break
-                                    }
-                                default:
-                                    break
-                                }
-                            }
-                        )
-                        .frame(width: 260, height: 45, alignment: .center)
-                        .cornerRadius(8)
+                        AppleSignInButton()
+                            .frame(width: 260, height: 45, alignment: .center)
+                            .cornerRadius(8)
                         
                     }.padding(.bottom, 20)
                 }
@@ -123,6 +66,51 @@ struct SignInView: View {
         .onAppear {
             GIDSignIn.sharedInstance().restorePreviousSignIn()
         }
+    }
+    
+    //Apple Button
+    func AppleSignInButton() -> SignInWithAppleButton {
+        return SignInWithAppleButton(
+            onRequest: { request in
+                let nonce = self.randomNonceString()
+                self.currentNonce = nonce
+                request.requestedScopes = [.fullName, .email]
+                request.nonce = self.sha256(nonce)
+            },
+            onCompletion: { result in
+                switch result {
+                case .success(let authResults):
+                    switch authResults.credential {
+                    case let appleIDCredential as ASAuthorizationAppleIDCredential:
+                        
+                        guard let nonce = self.currentNonce else {
+                            fatalError("Invalid state: A login callback was received, but no login request was sent.")
+                        }
+                        guard let appleIDToken = appleIDCredential.identityToken else {
+                            fatalError("Invalid state: A login callback was received, but no login request was sent.")
+                        }
+                        guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                            print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+                            return
+                        }
+                        
+                        let credential = OAuthProvider.credential(withProviderID: "apple.com",idToken: idTokenString,rawNonce: nonce)
+                        
+                        Auth.auth().signIn(with: credential) { (result, err) in
+                            if err != nil {
+                                print((err?.localizedDescription)!)
+                                return
+                            }
+                            self.uid = Auth.auth().currentUser?.uid ?? ""
+                        }
+                    default:
+                        break
+                    }
+                default:
+                    break
+                }
+            }
+        )
     }
     
     //Apple Auth Code
@@ -158,7 +146,7 @@ struct SignInView: View {
     }
     
     //Hashing function using CryptoKit
-    func sha256(_ input: String) -> String {
+    private func sha256(_ input: String) -> String {
         let inputData = Data(input.utf8)
         let hashedData = SHA256.hash(data: inputData)
         let hashString = hashedData.compactMap {
@@ -168,6 +156,7 @@ struct SignInView: View {
         return hashString
     }
 }
+
 
 struct GoogleSignInButton: View {
     var body: some View {
@@ -190,6 +179,7 @@ struct GoogleSignInButton: View {
         .cornerRadius(8)
     }
 }
+
 
 struct FacebookSignInButton: View {
     var body: some View {
