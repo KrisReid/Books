@@ -8,17 +8,11 @@
 import SwiftUI
 import SDWebImageSwiftUI
 import FirebaseDatabase
+import FirebaseAuth
 
 struct MyBooksView: View {
     
-//    @State private var showDetail = false
     @ObservedObject private var vm = BookViewModel()
-    
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [
-            .foregroundColor: UIColor.white
-        ]
-    }
     
     var body: some View {
         NavigationView {
@@ -29,7 +23,7 @@ struct MyBooksView: View {
 
                 ScrollView (.vertical, showsIndicators: false) {
                     VStack (spacing: 10  ) {
-                        
+
                         AddBookView()
 
                         ForEach(vm.books, id: \.self) { book in

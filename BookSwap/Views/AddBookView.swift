@@ -10,7 +10,6 @@ import SwiftUI
 struct AddBookView: View {
     
     @State private var showDetail = false
-    
     @State private var showImagePicker: Bool = false
     @State private var image: Image? = Image(systemName: "camera.circle")
 

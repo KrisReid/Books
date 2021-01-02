@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		022BE6FC2593F87400121F52 /* BookSwapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE6FB2593F87400121F52 /* BookSwapApp.swift */; };
-		022BE6FE2593F87400121F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE6FD2593F87400121F52 /* ContentView.swift */; };
 		022BE7002593F88100121F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022BE6FF2593F88100121F52 /* Assets.xcassets */; };
 		022BE7032593F88100121F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022BE7022593F88100121F52 /* Preview Assets.xcassets */; };
 		022BE70F2594D2B400121F52 /* SwapBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE70E2594D2B400121F52 /* SwapBooksView.swift */; };
@@ -23,14 +22,14 @@
 		022BE7AE2598EEB000121F52 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BE7AD2598EEB000121F52 /* BookViewModel.swift */; };
 		02818C9B259B751A001C854F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02818C9A259B751A001C854F /* GoogleService-Info.plist */; };
 		028FFB62259F8A7E00250F3C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FFB61259F8A7E00250F3C /* SignInView.swift */; };
-		028FFB66259F8D9100250F3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FFB65259F8D9100250F3C /* User.swift */; };
+		02B01BD525A04EE700A6132A /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B01BD425A04EE700A6132A /* SignInViewModel.swift */; };
+		02B01BEB25A1104100A6132A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B01BEA25A1104100A6132A /* User.swift */; };
 		9BF07D8F3E71E0183D9D8498 /* Pods_BookSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09220BAFF387FD06F79C3E2 /* Pods_BookSwap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		022BE6F82593F87400121F52 /* BookSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022BE6FB2593F87400121F52 /* BookSwapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSwapApp.swift; sourceTree = "<group>"; };
-		022BE6FD2593F87400121F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		022BE6FF2593F88100121F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022BE7022593F88100121F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		022BE7042593F88100121F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +44,9 @@
 		022BE7AD2598EEB000121F52 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		02818C9A259B751A001C854F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		028FFB61259F8A7E00250F3C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		028FFB65259F8D9100250F3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		02B01BD0259FD93100A6132A /* BookSwap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookSwap.entitlements; sourceTree = "<group>"; };
+		02B01BD425A04EE700A6132A /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		02B01BEA25A1104100A6132A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C09220BAFF387FD06F79C3E2 /* Pods_BookSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A861B8C88574B72857AEDB /* Pods-BookSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.debug.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.debug.xcconfig"; sourceTree = "<group>"; };
 		CF6FC58E8DE0EAB77C2EE085 /* Pods-BookSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookSwap.release.xcconfig"; path = "Target Support Files/Pods-BookSwap/Pods-BookSwap.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 				022BE7212594E30A00121F52 /* Model */,
 				022BE7172594D91100121F52 /* Views */,
 				022BE6FB2593F87400121F52 /* BookSwapApp.swift */,
+				02B01BD0259FD93100A6132A /* BookSwap.entitlements */,
 				022BE6FF2593F88100121F52 /* Assets.xcassets */,
 				022BE7042593F88100121F52 /* Info.plist */,
 				02818C9A259B751A001C854F /* GoogleService-Info.plist */,
@@ -110,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				028FFB60259F8A6400250F3C /* Sign In */,
-				022BE6FD2593F87400121F52 /* ContentView.swift */,
 				022BE7132594D37D00121F52 /* MyBooksView.swift */,
 				022BE7372595127300121F52 /* AddBookView.swift */,
 				022BE73E2598C90E00121F52 /* PhotoCaptureView.swift */,
@@ -133,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				022BE7222594E32B00121F52 /* Book.swift */,
-				028FFB65259F8D9100250F3C /* User.swift */,
+				02B01BEA25A1104100A6132A /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				022BE7AD2598EEB000121F52 /* BookViewModel.swift */,
+				02B01BD425A04EE700A6132A /* SignInViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -309,12 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				028FFB66259F8D9100250F3C /* User.swift in Sources */,
-				022BE6FE2593F87400121F52 /* ContentView.swift in Sources */,
 				022BE7382595127300121F52 /* AddBookView.swift in Sources */,
 				022BE70F2594D2B400121F52 /* SwapBooksView.swift in Sources */,
 				022BE72C2594F2E400121F52 /* IndividualBookView.swift in Sources */,
+				02B01BD525A04EE700A6132A /* SignInViewModel.swift in Sources */,
 				022BE73F2598C90E00121F52 /* PhotoCaptureView.swift in Sources */,
+				02B01BEB25A1104100A6132A /* User.swift in Sources */,
 				022BE7232594E32B00121F52 /* Book.swift in Sources */,
 				028FFB62259F8A7E00250F3C /* SignInView.swift in Sources */,
 				022BE6FC2593F87400121F52 /* BookSwapApp.swift in Sources */,
@@ -450,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookSwap/BookSwap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BookSwap/Preview Content\"";
 				DEVELOPMENT_TEAM = S9H4B38ZQN;
@@ -473,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookSwap/BookSwap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BookSwap/Preview Content\"";
 				DEVELOPMENT_TEAM = S9H4B38ZQN;

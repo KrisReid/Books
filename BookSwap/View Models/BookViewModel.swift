@@ -72,7 +72,3 @@ class BookViewModel: ObservableObject {
         Database.database().reference().childByAutoId().setValue(bookDictionary)
     }
 }
-
-
-
-

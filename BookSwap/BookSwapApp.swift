@@ -17,19 +17,19 @@ struct BookSwapApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(user: self.delegate)
+//            ContentView()
+//            ContentView(user: self.delegate)
+            SignInView(user: self.delegate, uid: "")
         }
     }
 }
 
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
+//class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
-//    @Published var user: FirebaseAuth.User?
+    @Published var uid = ""
+    @Published var user: User?
     
-    @Published var email = ""
-    @Published var displayName = ""
-    @Published var photoURL = URL(string: "")
-    @Published var phoneNumber = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -55,24 +55,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, Observ
         
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
 
-        
         //Sign into Firebase
-        Auth.auth().signIn(with: credential) { (result, err) in
+        Auth.auth().signIn(with: credential) { (user, err) in
             if err != nil {
                 print((err?.localizedDescription)!)
                 return
             }
-//            self.user = result?.user
             
-            self.email = result?.user.email ?? ""
-            self.displayName = result?.user.displayName ?? ""
-            self.photoURL = result?.user.photoURL ?? URL(string: "")
-            self.phoneNumber = result?.user.phoneNumber ?? ""
+            if let user = user {
+                self.uid = Auth.auth().currentUser?.uid ?? ""
+                self.user = User(uid: user.user.uid, email: user.user.email, displayName: user.user.displayName)
+            }
         }
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         print(error.localizedDescription)
     }
+    
     
 }

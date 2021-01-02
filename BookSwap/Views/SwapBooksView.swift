@@ -8,10 +8,12 @@
 import SwiftUI
 import GoogleSignIn
 import SDWebImageSwiftUI
+import FirebaseAuth
 
 struct SwapBooksView: View {
     
     @ObservedObject var user : AppDelegate
+    @Binding var uid: String
     
     var body: some View {
         NavigationView {
@@ -21,21 +23,30 @@ struct SwapBooksView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    WebImage(url: URL(string: "\(user.photoURL!)"))
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 100, height: 100)
-                        .clipped()
-                        .cornerRadius(100)
-
-                    Text("Welcome \(user.displayName)")
-                        .foregroundColor(.white)
+//                    WebImage(url: URL(string: "\(user.googlePhotoURL!)"))
+//                        .resizable()
+//                        .scaledToFill()
+//                        .frame(width: 100, height: 100)
+//                        .clipped()
+//                        .cornerRadius(100)
+//
+//                    Text("Welcome \(user.googleDisplayName)")
+//                        .foregroundColor(.white)
+//                    
+//                    Spacer()
                     
-                    Spacer()
                     
                     Button(action: {
                         GIDSignIn.sharedInstance().signOut()
-                        user.email = ""
+                        user.uid = ""
+                        uid = ""
+                        
+                        do {
+                            try Auth.auth().signOut()
+                        } catch {
+                            print("Error Signing Out")
+                        }
+
                         
                     }) {
                         Text("Sign Out")
@@ -46,6 +57,7 @@ struct SwapBooksView: View {
         }
     }
 }
+
 
 //struct SwapBooksView_Previews: PreviewProvider {
 //    static var previews: some View {

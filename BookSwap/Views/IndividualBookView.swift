@@ -10,9 +10,7 @@ import SDWebImageSwiftUI
 
 struct IndividualBookView: View {
     
-//    let book: BookViewModel
     let book: Book
-
     
     var body: some View {
         VStack (alignment: .leading, spacing: 0) {
@@ -48,6 +46,6 @@ struct IndividualBookView: View {
 
 //struct IndividualBookView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        IndividualBookView(book: Book.init(title: "David does dance", author: "Bobble", publisher: "Van Matterhorns", imageUrl: "https://cdn.faber.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/2/22847.books.origjpg.jpg", pageCount: 165))
+//        IndividualBookView()
 //    }
 //}
