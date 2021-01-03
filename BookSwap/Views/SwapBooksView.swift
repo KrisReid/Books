@@ -13,7 +13,7 @@ import FirebaseAuth
 struct SwapBooksView: View {
     
     @ObservedObject var user : AppDelegate
-    @Binding var uid: String
+    @Binding var appleUser: User
     
     var body: some View {
         NavigationView {
@@ -38,15 +38,16 @@ struct SwapBooksView: View {
                     
                     Button(action: {
                         GIDSignIn.sharedInstance().signOut()
-                        user.uid = ""
-                        uid = ""
-                        
+
                         do {
                             try Auth.auth().signOut()
                         } catch {
                             print("Error Signing Out")
                         }
-
+                        
+                        user.uid = ""
+                        user.user?.uid = ""
+                        appleUser.uid = ""
                         
                     }) {
                         Text("Sign Out")

@@ -10,7 +10,7 @@ import SwiftUI
 struct BookTabView: View {
     
     var user: AppDelegate
-    @Binding var uid: String
+    @Binding var appleUser: User
     
     var body: some View {
         TabView {
@@ -20,7 +20,7 @@ struct BookTabView: View {
                     Text("My Bookcase")
                 }
                 .tag(0)
-            SwapBooksView(user: user, uid: $uid)
+            SwapBooksView(user: user, appleUser: $appleUser)
                 .tabItem {
                     Image(systemName: "shuffle")
                     Text("Book Exchange")

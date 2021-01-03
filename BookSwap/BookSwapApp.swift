@@ -19,7 +19,7 @@ struct BookSwapApp: App {
         WindowGroup {
 //            ContentView()
 //            ContentView(user: self.delegate)
-            SignInView(user: self.delegate, uid: "")
+            SignInView(user: self.delegate, appleUser: delegate.user ?? User(uid: "", email: "", displayName: ""))
         }
     }
 }
@@ -27,9 +27,8 @@ struct BookSwapApp: App {
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
 //class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
-    @Published var uid = ""
     @Published var user: User?
-    
+    @Published var uid: String = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -63,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, Observ
             }
             
             if let user = user {
-                self.uid = Auth.auth().currentUser?.uid ?? ""
+                self.uid = user.user.uid
                 self.user = User(uid: user.user.uid, email: user.user.email, displayName: user.user.displayName)
             }
         }
@@ -72,6 +71,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, Observ
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         print(error.localizedDescription)
     }
-    
     
 }

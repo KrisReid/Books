@@ -16,7 +16,7 @@ struct SignInView: View {
     //Access to userObject that holds Google data
     @ObservedObject var user: AppDelegate
     //The uid of the apple account
-    @State var uid: String
+    @State var appleUser: User
     
     @State var currentNonce: String?
     @State var pulse = false
@@ -26,9 +26,9 @@ struct SignInView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)), Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
-            
-            if !user.uid.isEmpty || !self.uid.isEmpty {
-                BookTabView(user: self.user, uid: $uid)
+
+            if !user.uid.isEmpty || !self.appleUser.uid.isEmpty {
+                BookTabView(user: self.user, appleUser: $appleUser)
             }
             else {
                 VStack {
@@ -96,12 +96,17 @@ struct SignInView: View {
                         
                         let credential = OAuthProvider.credential(withProviderID: "apple.com",idToken: idTokenString,rawNonce: nonce)
                         
-                        Auth.auth().signIn(with: credential) { (result, err) in
+                        Auth.auth().signIn(with: credential) { (user, err) in
                             if err != nil {
                                 print((err?.localizedDescription)!)
                                 return
                             }
-                            self.uid = Auth.auth().currentUser?.uid ?? ""
+                            
+                            if let user = user {
+//                                self.uid = Auth.auth().currentUser?.uid ?? ""
+                                self.appleUser = User(uid: user.user.uid, email: user.user.email, displayName: user.user.displayName)
+                            }
+                            
                         }
                     default:
                         break
@@ -155,6 +160,7 @@ struct SignInView: View {
         
         return hashString
     }
+    
 }
 
 
